@@ -741,17 +741,46 @@
         .float {
             animation: float 4s ease-in-out infinite;
         }
+        
+            /* 1. The Container */
+        .image-container {
+          position: relative;    /* Crucial: Sets the coordinate system for the text */
+          width: 100%;           /* Makes the container responsive */
+          max-width: 600px;      /* Limits the size on larger screens */
+          overflow: hidden;      /* Keeps everything neat and tidy */
+        }
+        
+        /* 2. The Image */
+        .overlay-image {
+          width: 100%;           /* Makes the image fill the container */
+          height: auto;          /* Maintains aspect ratio */
+          display: block;        /* Removes unwanted bottom spacing */
+        }
+        
+        /* 3. The Text Overlay */
+        .text-overlay {
+          position: absolute;    /* Pulls the text out of normal flow */
+          bottom: 20px;          /* Places it 20px from the bottom */
+          left: 20px;            /* Places it 20px from the left */
+          right: 20px;           /* Keeps it from spilling off the right edge */
+          
+          /* Styling for readability */
+          background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+          color: white;          /* White text for contrast */
+          padding: 15px;         /* Padding around the text */
+          border-radius: 5px;    /* Optional: rounds the corners of the text box */
+        }
     </style>
     <meta name="google-site-verification" content="jvBGlJklkOuAVRWHUKp_ou8kVF7RSZgvr4VFKX6N-WI" />
       <!-- Other existing tags -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Dare Creatives",
-    "url": "https://dare-creatives.netlify.app/"
-  }
-  </script>
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Dare Creatives",
+        "url": "https://dare-creatives.netlify.app/"
+      }
+      </script>
 </head>
 <body>
     <!-- Header -->
@@ -866,6 +895,14 @@
                         <p>Complete brand identity for tech startup including logo, colors and guidelines</p>
                     </div>
                 </div>
+
+                    <div class="image-container">
+  <img src="campus.png" alt="A beautiful landscape" class="overlay-image">
+  <div class="text-overlay">
+    <h2>Adventure Awaits</h2>
+    <p>Explore the great outdoors today.</p>
+  </div>
+</div>
                
                 <div class="portfolio-item">
                     <img src="img/design.jpg" alt="App Design" class="portfolio-img">
