@@ -399,24 +399,21 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s ease;
+            transition: transform 0.5s ease-in;
         }
 
         .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(41, 47, 54, 0.8);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.4s ease;
-            padding: 20px;
-            text-align: center;
+          position: absolute;    /* Pulls the text out of normal flow */
+          bottom: 0px;          /* Places it 20px from the bottom */
+          left: 0px;            /* Places it 20px from the left */
+          right: 0px;           /* Keeps it from spilling off the right edge */
+
+            /* Styling for readability */
+          background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background */
+          color: white;          /* White text for contrast */
+          padding: 15px;         /* Padding around the text */
+          border-radius: 5px;    /* Optional: rounds the corners of the text box */
+          transition: opacity 0.5s ease;
         }
 
         .portfolio-item:hover .portfolio-overlay {
@@ -429,12 +426,13 @@
 
         .portfolio-overlay h3 {
             color: white;
-            font-size: 1.5rem;
-            margin-bottom: 10px;
+            font-size: 1 rem;
+            margin-bottom: 5px;
         }
 
         .portfolio-overlay p {
             color: rgba(255, 255, 255, 0.8);
+            align-items: center;
             max-width: 300px;
         }
 
@@ -889,20 +887,12 @@
                 </div>
                
                 <div class="portfolio-item">
-                    <img src="img/brand.jpg" alt="Branding Project" class="portfolio-img">
+                    <img src="img/optim.jpg" alt="Branding Project" class="portfolio-img"  style="margin-bottom: 10px;">
                     <div class="portfolio-overlay">
                         <h3>Corporate Branding</h3>
                         <p>Complete brand identity for tech startup including logo, colors and guidelines</p>
                     </div>
                 </div>
-
-                    <div class="image-container">
-  <img src="campus.png" alt="A beautiful landscape" class="overlay-image">
-  <div class="text-overlay">
-    <h2>Adventure Awaits</h2>
-    <p>Explore the great outdoors today.</p>
-  </div>
-</div>
                
                 <div class="portfolio-item">
                     <img src="img/design.jpg" alt="App Design" class="portfolio-img">
@@ -1042,11 +1032,17 @@
                 </div>
                     <div class="footer-about">
                          <p>Dare Creatives transforms your vision into stunning digital experiences through innovative web design, graphics, and IT solutions.</p>
-                    <div class="social-links">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                    </div>
+                            <div class="social-links">
+                                <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                                
+                                <a href="#" class="social-icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" fill="currentColor" style="vertical-align: -0.125em;">
+                                        <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
+                                    </svg>
+                                </a>
+                                
+                                <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                            </div>
                     <p>@darecreatives01</p>
                     <div class="social-links">
                         <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
